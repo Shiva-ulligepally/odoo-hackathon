@@ -47,7 +47,7 @@ class UploadService {
       fileType,
       owner: user._id,
       organization: user.organization,
-      verificationStatus: 'Verified' // Auto verify in staging
+      verificationStatus: 'Pending' // Start with Pending, Python pipeline updates to Verified/Rejected
     });
 
     // 1. Create Activity Log
@@ -58,30 +58,33 @@ class UploadService {
       details: `Uploaded ESG verification document: ${fileName}`
     });
 
-    // 2. Create mock Confidence Score for this document
-    await ConfidenceScoreRepository.create({
-      organization: user.organization,
-      targetModel: 'UploadedDocument',
-      targetId: document._id,
-      score: 98,
-      factors: [
-        { factorName: 'File Integrity Check', status: 'Pass', weight: 40 },
-        { factorName: 'Digital Signature Verified', status: 'Pass', weight: 30 },
-        { factorName: 'Source Verification', status: 'Pass', weight: 30 }
-      ],
-      verifiedByAI: true
-    });
+    // 2. Trigger Python AI service asynchronously in background
+    const triggerAIPipeline = async () => {
+      try {
+        const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:8000';
+        console.log(`Triggering AI pipeline for document ${document._id}...`);
+        const response = await fetch(`${aiServiceUrl}/api/ai/process-document`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            documentId: document._id.toString(),
+            organizationId: user.organization.toString(),
+            userId: user._id.toString(),
+            fileUrl: fileUrl.startsWith('/') ? `http://localhost:${process.env.PORT || 5000}${fileUrl}` : fileUrl,
+            fileType,
+            fileName
+          })
+        });
+        const result = await response.json();
+        console.log(`AI pipeline trigger response for ${fileName}:`, result);
+      } catch (err) {
+        console.error(`Error triggering AI pipeline for ${fileName}:`, err.message);
+      }
+    };
 
-    // 3. Create mock AI Recommendation based on this document upload
-    await AIRecommendationRepository.create({
-      organization: user.organization,
-      recommendationType: 'Carbon Reduction',
-      title: `Optimize emissions based on ${fileName}`,
-      description: `AI analyzed the uploaded document and recommends switching to low-emission alternative transport routes to save up to 12% in travel overhead.`,
-      potentialSavingsCo2e: 3.5,
-      potentialFinancialSavings: 850,
-      confidenceScore: 94
-    });
+    setImmediate(triggerAIPipeline);
 
     return document;
   }
