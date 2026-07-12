@@ -7,6 +7,7 @@ import { useToast } from '@/components/ui/Toast';
 import { Button } from '@/components/ui/Button';
 import { FormInput } from '@/components/forms/FormInput';
 import { Key, Mail, Lock, ShieldAlert, ArrowLeft, RefreshCw } from 'lucide-react';
+import api from '@/lib/axios';
 import Link from 'next/link';
 
 type AuthStep = 'login' | 'forgot' | 'otp' | 'reset';
@@ -17,7 +18,7 @@ export default function LoginPage() {
   const [step, setStep] = useState<AuthStep>('login');
 
   // Input States
-  const [email, setEmail] = useState('aditya@ecosphere.ai');
+  const [email, setEmail] = useState('admin@ecosphere.ai');
   const [password, setPassword] = useState('password123');
   const [otp, setOtp] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -25,15 +26,20 @@ export default function LoginPage() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
+    try {
+      const response = await api.post('/auth/login', { email, password });
       setIsLoading(false);
-      localStorage.setItem('auth_token', 'mock_token_key');
-      toast('Welcome back, Aditya! Authenticated successfully.', 'success');
+      const token = response.data.data.token;
+      localStorage.setItem('auth_token', token);
+      toast('Welcome back! Authenticated successfully.', 'success');
       router.push('/dashboard');
-    }, 1500);
+    } catch (err: any) {
+      setIsLoading(false);
+      toast(err.message || 'Invalid credentials or login failure.', 'error');
+    }
   };
 
   const handleForgotPassword = (e: React.FormEvent) => {

@@ -1,0 +1,111 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "EcoSphere AI - Enterprise Backend API",
+    "description": "Autonomous ESG Operating System REST API documentation",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/api/auth/register": {
+      "post": {
+        "summary": "Register a new organization and admin",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string", "example": "admin@company.com" },
+                  "password": { "type": "string", "example": "password123" },
+                  "organizationName": { "type": "string", "example": "Company Inc" },
+                  "industry": { "type": "string", "example": "Technology" },
+                  "location": { "type": "string", "example": "New York" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Success" }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "summary": "Authenticate user & return JWT token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string", "example": "admin@company.com" },
+                  "password": { "type": "string", "example": "password123" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Success" }
+        }
+      }
+    },
+    "/api/dashboard": {
+      "get": {
+        "summary": "Retrieve aggregated ESG metrics",
+        "responses": {
+          "200": { "description": "Success" }
+        }
+      }
+    },
+    "/api/departments": {
+      "get": {
+        "summary": "Get all company departments"
+      },
+      "post": {
+        "summary": "Create new department"
+      }
+    },
+    "/api/employees": {
+      "get": {
+        "summary": "Get all employee profiles"
+      },
+      "post": {
+        "summary": "Register employee"
+      }
+    },
+    "/api/carbon": {
+      "get": {
+        "summary": "Get carbon emission logs"
+      },
+      "post": {
+        "summary": "Log a carbon record"
+      }
+    },
+    "/api/policies": {
+      "get": {
+        "summary": "Get environmental policies"
+      },
+      "post": {
+        "summary": "Add a policy guideline"
+      }
+    },
+    "/api/upload/document": {
+      "post": {
+        "summary": "Upload and log file metadata to Cloudinary/local fallback",
+        "responses": {
+          "201": { "description": "File metadata uploaded" }
+        }
+      }
+    }
+  }
+}
