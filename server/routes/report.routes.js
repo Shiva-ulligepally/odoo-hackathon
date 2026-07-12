@@ -11,4 +11,6 @@ router.route('/')
   .get(ReportController.getReports)
   .post(authorize('Admin', 'Manager'), validate(validateCreateReport), ReportController.createReport);
 
+router.post('/generate', authorize('Admin', 'Manager'), validate(validateCreateReport), ReportController.createReport);
+
 module.exports = router;

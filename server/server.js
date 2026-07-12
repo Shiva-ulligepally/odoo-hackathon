@@ -23,6 +23,7 @@ const policyRoutes = require('./routes/policy.routes');
 const reportRoutes = require('./routes/report.routes');
 const uploadRoutes = require('./routes/upload.routes');
 const dashboardRoutes = require('./routes/dashboard.routes');
+const socialRoutes = require('./routes/social.routes');
 
 // Connect to Database
 connectDB();
@@ -30,7 +31,11 @@ connectDB();
 const app = express();
 
 // Enable CORS
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
+}));
 
 // Body Parser
 app.use(express.json());
@@ -52,6 +57,7 @@ app.use('/api/policies', policyRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/social', socialRoutes);
 
 // Health Endpoint
 app.get('/health', (req, res) => {

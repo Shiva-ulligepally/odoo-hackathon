@@ -39,8 +39,48 @@ const getAnalytics = async (req, res, next) => {
   }
 };
 
+const getCarbonMetrics = async (req, res, next) => {
+  try {
+    const data = await CarbonService.getCarbonMetrics(req.user.organization);
+    return sendResponse(res, 200, true, 'Carbon metrics retrieved successfully', data);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getHistoricalEmissions = async (req, res, next) => {
+  try {
+    const data = await CarbonService.getHistoricalEmissions(req.user.organization);
+    return sendResponse(res, 200, true, 'Historical emissions trends retrieved successfully', data);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getFacilitiesEmissions = async (req, res, next) => {
+  try {
+    const data = await CarbonService.getFacilitiesEmissions(req.user.organization);
+    return sendResponse(res, 200, true, 'Facilities emissions retrieved successfully', data);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getEnergyMixData = async (req, res, next) => {
+  try {
+    const data = await CarbonService.getEnergyMixData(req.user.organization);
+    return sendResponse(res, 200, true, 'Energy mix retrieved successfully', data);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   getCarbonRecords,
   createCarbonRecord,
-  getAnalytics
+  getAnalytics,
+  getCarbonMetrics,
+  getHistoricalEmissions,
+  getFacilitiesEmissions,
+  getEnergyMixData
 };
