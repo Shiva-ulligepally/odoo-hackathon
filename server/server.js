@@ -23,6 +23,7 @@ const policyRoutes = require('./routes/policy.routes');
 const reportRoutes = require('./routes/report.routes');
 const uploadRoutes = require('./routes/upload.routes');
 const dashboardRoutes = require('./routes/dashboard.routes');
+const aiRoutes = require('./routes/ai.routes');
 
 // Connect to Database
 connectDB();
@@ -52,6 +53,7 @@ app.use('/api/policies', policyRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/ai', aiRoutes);
 
 // Health Endpoint
 app.get('/health', (req, res) => {

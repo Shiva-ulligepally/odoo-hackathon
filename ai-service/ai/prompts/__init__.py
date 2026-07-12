@@ -1,0 +1,1 @@
+# EcoSphere AI Prompts Package
