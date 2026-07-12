@@ -13,8 +13,7 @@ odoo-hackathon/
 ├── server/          ← Node.js + Express backend (CRUD APIs, Auth, MongoDB)
 ├── client/          ← Next.js frontend application (Port 3000)
 ├── ai-service/      ← Python FastAPI AI Intelligence Layer (Port 8000)
-├── shared/          ← Shared TypeScript types
-└── backend/         ← TypeScript model definitions (legacy bootstrap)
+└── shared/          ← Shared TypeScript types
 ```
 
 ---
