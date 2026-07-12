@@ -89,6 +89,106 @@
         },
         "createdAt": "2026-07-11T16:45:00Z"
       }
+    ],
+    "deadlines": [
+      {
+        "id": "dl-01",
+        "title": "GRI Disclosure Submission",
+        "dueDate": "2026-08-01T23:59:59Z",
+        "category": "G",
+        "priority": "high",
+        "status": "pending"
+      },
+      {
+        "id": "dl-02",
+        "title": "Scope 1 Annual Carbon Audit",
+        "dueDate": "2026-07-25T23:59:59Z",
+        "category": "E",
+        "priority": "high",
+        "status": "pending"
+      },
+      {
+        "id": "dl-03",
+        "title": "Board Remuneration Disclosure",
+        "dueDate": "2026-09-15T23:59:59Z",
+        "category": "G",
+        "priority": "medium",
+        "status": "pending"
+      },
+      {
+        "id": "dl-04",
+        "title": "DEI Employee Review Q2",
+        "dueDate": "2026-07-15T23:59:59Z",
+        "category": "S",
+        "priority": "low",
+        "status": "completed"
+      }
+    ],
+    "recentActivities": [
+      {
+        "id": "act-01",
+        "timestamp": "2026-07-12T09:15:00Z",
+        "actor": "Aditya (Director)",
+        "action": "Initiated PPA Solar Transition Plan",
+        "category": "E",
+        "details": "Contract sent to legal team for the Southeast Manufacturing Hub."
+      },
+      {
+        "id": "act-02",
+        "timestamp": "2026-07-11T14:22:00Z",
+        "actor": "System Automation",
+        "action": "Completed Anti-Corruption Audit Q2",
+        "category": "G",
+        "details": "Whistleblower log checks completed. 0 unresolved alerts."
+      },
+      {
+        "id": "act-03",
+        "timestamp": "2026-07-10T11:05:00Z",
+        "actor": "Sarah Jenkins (HR VP)",
+        "action": "Updated Gender Diversity Target",
+        "category": "S",
+        "details": "Board diversity committee allocation set to 40% female leadership."
+      },
+      {
+        "id": "act-04",
+        "timestamp": "2026-07-09T16:40:00Z",
+        "actor": "Aditya (Director)",
+        "action": "Downloaded GRI Report Draft",
+        "category": "G",
+        "details": "Generated sustainability index report for the 2025 audit year."
+      }
+    ],
+    "challenges": [
+      {
+        "id": "ch-01",
+        "title": "Solar Pioneer Hub",
+        "description": "Convert 70% of manufacturing units to renewable electric power offsets.",
+        "targetValue": 70,
+        "currentValue": 64.5,
+        "points": 1000,
+        "category": "E",
+        "status": "active"
+      },
+      {
+        "id": "ch-02",
+        "title": "Whistleblower Zero",
+        "description": "Maintain 100% response and cleanup closure rate on corporate complaints.",
+        "targetValue": 100,
+        "currentValue": 100,
+        "points": 500,
+        "category": "G",
+        "status": "completed"
+      },
+      {
+        "id": "ch-03",
+        "title": "Suppliers Under Review",
+        "description": "Audit Tier 1 critical suppliers for basic ethical certifications.",
+        "targetValue": 100,
+        "currentValue": 94.5,
+        "points": 800,
+        "category": "S",
+        "status": "active"
+      }
     ]
   }
 }

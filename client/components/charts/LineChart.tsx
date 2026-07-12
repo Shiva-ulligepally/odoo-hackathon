@@ -34,7 +34,10 @@ export default function LineChart({
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
-    setResolvedTheme(isDark ? 'dark' : 'light');
+    const timer = setTimeout(() => {
+      setResolvedTheme(isDark ? 'dark' : 'light');
+    }, 0);
+    return () => clearTimeout(timer);
   }, [theme]);
 
   const isDark = resolvedTheme === 'dark';
@@ -58,9 +61,9 @@ export default function LineChart({
       borderRadius: 8,
       shadowColor: 'rgba(0, 0, 0, 0.1)',
       shadowBlur: 10,
-      formatter: function (params: any) {
+      formatter: function (params: { axisValue: string; value: number; color: string; seriesName: string }[]) {
         let tooltipHtml = `<div style="font-weight: 600; margin-bottom: 6px;">${params[0].axisValue}</div>`;
-        params.forEach((item: any) => {
+        params.forEach((item: { value: number; color: string; seriesName: string }) => {
           const valueFormatted = new Intl.NumberFormat('en-US').format(item.value);
           tooltipHtml += `
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; margin-top: 4px;">

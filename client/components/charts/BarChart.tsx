@@ -30,7 +30,10 @@ export default function BarChart({
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
-    setResolvedTheme(isDark ? 'dark' : 'light');
+    const timer = setTimeout(() => {
+      setResolvedTheme(isDark ? 'dark' : 'light');
+    }, 0);
+    return () => clearTimeout(timer);
   }, [theme]);
 
   const isDark = resolvedTheme === 'dark';

@@ -22,6 +22,10 @@ export interface ESGOverview {
     governance: ESGScoreDetail;
   };
   lastUpdated: string;
+  deadlines?: EsgDeadline[];
+  recentActivities?: RecentActivityLog[];
+  challenges?: EsgChallenge[];
+  insights?: AIInsight[];
 }
 
 export interface EmissionsBreakdown {
@@ -85,4 +89,56 @@ export interface ESGReport {
   certifiedBy?: string;
   downloadUrl: string;
   createdAt: string;
+}
+
+// Extended Enterprise Types
+export interface FacilityEmissionsRecord {
+  id: string;
+  name: string;
+  location: string;
+  efficiencyRating: 'A' | 'B' | 'C' | 'D' | 'E';
+  scope1: number;
+  scope2: number;
+  scope3: number;
+  total: number;
+  status: 'compliant' | 'warning' | 'non_compliant';
+}
+
+export interface SupplierEsgRecord {
+  id: string;
+  name: string;
+  sector: string;
+  country: string;
+  esgScore: number;
+  auditStatus: 'compliant' | 'under_review' | 'non_compliant';
+  lastAuditDate: string;
+}
+
+export interface EsgDeadline {
+  id: string;
+  title: string;
+  dueDate: string;
+  category: ESGCategory;
+  priority: 'low' | 'medium' | 'high';
+  status: 'pending' | 'completed';
+}
+
+export interface EsgChallenge {
+  id: string;
+  title: string;
+  description: string;
+  targetValue: number;
+  currentValue: number;
+  points: number;
+  category: ESGCategory;
+  status: 'active' | 'completed';
+}
+
+export interface RecentActivityLog {
+  id: string;
+  timestamp: string;
+  actor: string;
+  action: string;
+  category: ESGCategory | 'SYS';
+  details: string;
 }

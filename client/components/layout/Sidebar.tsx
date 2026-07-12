@@ -32,6 +32,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Carbon Accounting', href: '/carbon', icon: Leaf },
     { name: 'Social & CSR', href: '/csr', icon: Users },
     { name: 'Corporate Governance', href: '/governance', icon: Scale },
+    { name: 'ESG Digital Twin', href: '/digital-twin', icon: Cpu },
     { name: 'Gamification', href: '/gamification', icon: Gamepad },
     { name: 'Reports & Audits', href: '/reports', icon: FileText },
   ];

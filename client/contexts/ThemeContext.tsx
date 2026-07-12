@@ -12,20 +12,15 @@ export interface ThemeContextType {
 export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('system');
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-    if (savedTheme) {
-      setThemeState(savedTheme);
+  const [theme, setThemeState] = useState<Theme>(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme') as Theme | null;
+      return savedTheme || 'system';
     }
-    setMounted(true);
-  }, []);
+    return 'system';
+  });
 
   useEffect(() => {
-    if (!mounted) return;
-
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
 
@@ -37,7 +32,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.add(theme);
     }
-  }, [theme, mounted]);
+  }, [theme]);
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
