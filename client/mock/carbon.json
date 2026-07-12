@@ -1,0 +1,170 @@
+{
+  "success": true,
+  "timestamp": "2026-07-12T10:00:00Z",
+  "data": {
+    "currentMetrics": {
+      "year": 2026,
+      "breakdown": {
+        "scope1": 4200.5,
+        "scope2": 8900.2,
+        "scope3": 24500.8,
+        "total": 37601.5
+      },
+      "targetEmissions": 35000.0,
+      "renewableEnergyPercentage": 64.5,
+      "intensityPerRevenue": 14.8
+    },
+    "historicalEmissions": [
+      {
+        "year": 2022,
+        "breakdown": {
+          "scope1": 5600.0,
+          "scope2": 12800.0,
+          "scope3": 31200.0,
+          "total": 49600.0
+        },
+        "targetEmissions": 50000.0,
+        "renewableEnergyPercentage": 32.0,
+        "intensityPerRevenue": 22.4
+      },
+      {
+        "year": 2023,
+        "breakdown": {
+          "scope1": 5100.0,
+          "scope2": 11400.0,
+          "scope3": 28600.0,
+          "total": 45100.0
+        },
+        "targetEmissions": 45000.0,
+        "renewableEnergyPercentage": 41.5,
+        "intensityPerRevenue": 19.5
+      },
+      {
+        "year": 2024,
+        "breakdown": {
+          "scope1": 4800.0,
+          "scope2": 10100.0,
+          "scope3": 26800.0,
+          "total": 41700.0
+        },
+        "targetEmissions": 40000.0,
+        "renewableEnergyPercentage": 52.0,
+        "intensityPerRevenue": 17.2
+      },
+      {
+        "year": 2025,
+        "breakdown": {
+          "scope1": 4450.0,
+          "scope2": 9300.0,
+          "scope3": 25200.0,
+          "total": 38950.0
+        },
+        "targetEmissions": 37500.0,
+        "renewableEnergyPercentage": 60.2,
+        "intensityPerRevenue": 15.6
+      },
+      {
+        "year": 2026,
+        "breakdown": {
+          "scope1": 4200.5,
+          "scope2": 8900.2,
+          "scope3": 24500.8,
+          "total": 37601.5
+        },
+        "targetEmissions": 35000.0,
+        "renewableEnergyPercentage": 64.5,
+        "intensityPerRevenue": 14.8
+      }
+    ],
+    "facilities": [
+      {
+        "id": "fac-01",
+        "name": "Southeast Manufacturing Hub",
+        "location": "Georgia, USA",
+        "efficiencyRating": "B",
+        "scope1": 1200.5,
+        "scope2": 2400.2,
+        "scope3": 8100.4,
+        "total": 11701.1,
+        "status": "compliant"
+      },
+      {
+        "id": "fac-02",
+        "name": "Pacific Logistics Center",
+        "location": "California, USA",
+        "efficiencyRating": "A",
+        "scope1": 450.2,
+        "scope2": 1100.5,
+        "scope3": 4200.3,
+        "total": 5751.0,
+        "status": "compliant"
+      },
+      {
+        "id": "fac-03",
+        "name": "Midwest Foundry Hub",
+        "location": "Indiana, USA",
+        "efficiencyRating": "D",
+        "scope1": 2100.8,
+        "scope2": 4500.3,
+        "scope3": 9800.6,
+        "total": 16401.7,
+        "status": "warning"
+      },
+      {
+        "id": "fac-04",
+        "name": "EU Distribution Center",
+        "location": "Rotterdam, NL",
+        "efficiencyRating": "A",
+        "scope1": 449.0,
+        "scope2": 899.2,
+        "scope3": 2399.5,
+        "total": 3747.7,
+        "status": "compliant"
+      }
+    ],
+    "suppliers": [
+      {
+        "id": "sup-01",
+        "name": "Apex Metals Corp",
+        "sector": "Raw Materials",
+        "country": "Germany",
+        "esgScore": 84,
+        "auditStatus": "compliant",
+        "lastAuditDate": "2026-04-12"
+      },
+      {
+        "id": "sup-02",
+        "name": "Beta Packing Systems",
+        "sector": "Logistics & Supply",
+        "country": "China",
+        "esgScore": 68,
+        "auditStatus": "under_review",
+        "lastAuditDate": "2026-06-20"
+      },
+      {
+        "id": "sup-03",
+        "name": "CleanChem LLC",
+        "sector": "Chemicals",
+        "country": "USA",
+        "esgScore": 92,
+        "auditStatus": "compliant",
+        "lastAuditDate": "2026-01-15"
+      },
+      {
+        "id": "sup-04",
+        "name": "Delta Energy Services",
+        "sector": "Utilities",
+        "country": "India",
+        "esgScore": 55,
+        "auditStatus": "non_compliant",
+        "lastAuditDate": "2026-05-30"
+      }
+    ],
+    "energyMix": [
+      { "name": "Solar Utility PPA", "value": 45, "color": "#10b981" },
+      { "name": "Wind Generation", "value": 19.5, "color": "#3b82f6" },
+      { "name": "Natural Gas (Grid)", "value": 25.5, "color": "#f59e0b" },
+      { "name": "Coal Sourced Grid", "value": 10, "color": "#ef4444" }
+    ]
+  }
+}

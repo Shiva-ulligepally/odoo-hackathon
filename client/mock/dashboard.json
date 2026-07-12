@@ -1,0 +1,194 @@
+{
+  "success": true,
+  "timestamp": "2026-07-12T10:00:00Z",
+  "data": {
+    "overallScore": 86,
+    "overallGrade": "A-",
+    "percentile": 94.2,
+    "yoyTrend": 4.5,
+    "lastUpdated": "2026-07-12T05:00:00Z",
+    "breakdown": {
+      "environmental": {
+        "category": "E",
+        "score": 82,
+        "grade": "B+",
+        "changeYoy": 6.2,
+        "status": "improving",
+        "keyDrivers": [
+          "Renewable electricity transition (+12%)",
+          "Fleet electrification (+8%)",
+          "Paperless office policy (+2%)"
+        ]
+      },
+      "social": {
+        "category": "S",
+        "score": 90,
+        "grade": "A",
+        "changeYoy": 3.8,
+        "status": "improving",
+        "keyDrivers": [
+          "Pay equity gap closed to 1%",
+          "Employee turnover down 15%",
+          "Supplier code of conduct compliance (+5%)"
+        ]
+      },
+      "governance": {
+        "category": "G",
+        "score": 87,
+        "grade": "A-",
+        "changeYoy": 2.1,
+        "status": "stable",
+        "keyDrivers": [
+          "Board diversity target met (40% female)",
+          "Cybersecurity audit zero findings",
+          "Corruption-prevention training (100% complete)"
+        ]
+      }
+    },
+    "confidence": 96,
+    "insights": [
+      {
+        "id": "ins-01",
+        "category": "E",
+        "title": "HVAC System Optimization",
+        "description": "Optimize temperature thresholds at regional logistics centers based on weather predictions.",
+        "recommendation": "Deploy smart thermostats and align operating schedules with real-time solar generation curves.",
+        "severity": "medium",
+        "status": "unresolved",
+        "estimatedImpact": {
+          "value": 120.5,
+          "unit": "tCO2e"
+        },
+        "createdAt": "2026-07-10T08:30:00Z"
+      },
+      {
+        "id": "ins-02",
+        "category": "E",
+        "title": "Transition to Solar Power PPA",
+        "description": "Off-site Power Purchase Agreement (PPA) for the Southeast manufacturing hub.",
+        "recommendation": "Sign a 10-year solar energy contract with local clean utilities.",
+        "severity": "high",
+        "status": "in_progress",
+        "estimatedImpact": {
+          "value": 2400.0,
+          "unit": "tCO2e"
+        },
+        "createdAt": "2026-07-08T14:20:00Z"
+      },
+      {
+        "id": "ins-03",
+        "category": "G",
+        "title": "Supplier ESG Disclosures",
+        "description": "24% of Tier 1 suppliers have not submitted their carbon footprint reporting for Q2.",
+        "recommendation": "Send automated reminders and link future vendor evaluations to compliance scores.",
+        "severity": "critical",
+        "status": "unresolved",
+        "estimatedImpact": {
+          "value": 15,
+          "unit": "% Supplier compliance"
+        },
+        "createdAt": "2026-07-11T16:45:00Z"
+      }
+    ],
+    "deadlines": [
+      {
+        "id": "dl-01",
+        "title": "GRI Disclosure Submission",
+        "dueDate": "2026-08-01T23:59:59Z",
+        "category": "G",
+        "priority": "high",
+        "status": "pending"
+      },
+      {
+        "id": "dl-02",
+        "title": "Scope 1 Annual Carbon Audit",
+        "dueDate": "2026-07-25T23:59:59Z",
+        "category": "E",
+        "priority": "high",
+        "status": "pending"
+      },
+      {
+        "id": "dl-03",
+        "title": "Board Remuneration Disclosure",
+        "dueDate": "2026-09-15T23:59:59Z",
+        "category": "G",
+        "priority": "medium",
+        "status": "pending"
+      },
+      {
+        "id": "dl-04",
+        "title": "DEI Employee Review Q2",
+        "dueDate": "2026-07-15T23:59:59Z",
+        "category": "S",
+        "priority": "low",
+        "status": "completed"
+      }
+    ],
+    "recentActivities": [
+      {
+        "id": "act-01",
+        "timestamp": "2026-07-12T09:15:00Z",
+        "actor": "Aditya (Director)",
+        "action": "Initiated PPA Solar Transition Plan",
+        "category": "E",
+        "details": "Contract sent to legal team for the Southeast Manufacturing Hub."
+      },
+      {
+        "id": "act-02",
+        "timestamp": "2026-07-11T14:22:00Z",
+        "actor": "System Automation",
+        "action": "Completed Anti-Corruption Audit Q2",
+        "category": "G",
+        "details": "Whistleblower log checks completed. 0 unresolved alerts."
+      },
+      {
+        "id": "act-03",
+        "timestamp": "2026-07-10T11:05:00Z",
+        "actor": "Sarah Jenkins (HR VP)",
+        "action": "Updated Gender Diversity Target",
+        "category": "S",
+        "details": "Board diversity committee allocation set to 40% female leadership."
+      },
+      {
+        "id": "act-04",
+        "timestamp": "2026-07-09T16:40:00Z",
+        "actor": "Aditya (Director)",
+        "action": "Downloaded GRI Report Draft",
+        "category": "G",
+        "details": "Generated sustainability index report for the 2025 audit year."
+      }
+    ],
+    "challenges": [
+      {
+        "id": "ch-01",
+        "title": "Solar Pioneer Hub",
+        "description": "Convert 70% of manufacturing units to renewable electric power offsets.",
+        "targetValue": 70,
+        "currentValue": 64.5,
+        "points": 1000,
+        "category": "E",
+        "status": "active"
+      },
+      {
+        "id": "ch-02",
+        "title": "Whistleblower Zero",
+        "description": "Maintain 100% response and cleanup closure rate on corporate complaints.",
+        "targetValue": 100,
+        "currentValue": 100,
+        "points": 500,
+        "category": "G",
+        "status": "completed"
+      },
+      {
+        "id": "ch-03",
+        "title": "Suppliers Under Review",
+        "description": "Audit Tier 1 critical suppliers for basic ethical certifications.",
+        "targetValue": 100,
+        "currentValue": 94.5,
+        "points": 800,
+        "category": "S",
+        "status": "active"
+      }
+    ]
+  }
+}
