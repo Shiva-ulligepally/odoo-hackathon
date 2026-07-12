@@ -1,0 +1,94 @@
+{
+  "success": true,
+  "timestamp": "2026-07-12T10:00:00Z",
+  "data": {
+    "overallScore": 86,
+    "overallGrade": "A-",
+    "percentile": 94.2,
+    "yoyTrend": 4.5,
+    "lastUpdated": "2026-07-12T05:00:00Z",
+    "breakdown": {
+      "environmental": {
+        "category": "E",
+        "score": 82,
+        "grade": "B+",
+        "changeYoy": 6.2,
+        "status": "improving",
+        "keyDrivers": [
+          "Renewable electricity transition (+12%)",
+          "Fleet electrification (+8%)",
+          "Paperless office policy (+2%)"
+        ]
+      },
+      "social": {
+        "category": "S",
+        "score": 90,
+        "grade": "A",
+        "changeYoy": 3.8,
+        "status": "improving",
+        "keyDrivers": [
+          "Pay equity gap closed to 1%",
+          "Employee turnover down 15%",
+          "Supplier code of conduct compliance (+5%)"
+        ]
+      },
+      "governance": {
+        "category": "G",
+        "score": 87,
+        "grade": "A-",
+        "changeYoy": 2.1,
+        "status": "stable",
+        "keyDrivers": [
+          "Board diversity target met (40% female)",
+          "Cybersecurity audit zero findings",
+          "Corruption-prevention training (100% complete)"
+        ]
+      }
+    },
+    "confidence": 96,
+    "insights": [
+      {
+        "id": "ins-01",
+        "category": "E",
+        "title": "HVAC System Optimization",
+        "description": "Optimize temperature thresholds at regional logistics centers based on weather predictions.",
+        "recommendation": "Deploy smart thermostats and align operating schedules with real-time solar generation curves.",
+        "severity": "medium",
+        "status": "unresolved",
+        "estimatedImpact": {
+          "value": 120.5,
+          "unit": "tCO2e"
+        },
+        "createdAt": "2026-07-10T08:30:00Z"
+      },
+      {
+        "id": "ins-02",
+        "category": "E",
+        "title": "Transition to Solar Power PPA",
+        "description": "Off-site Power Purchase Agreement (PPA) for the Southeast manufacturing hub.",
+        "recommendation": "Sign a 10-year solar energy contract with local clean utilities.",
+        "severity": "high",
+        "status": "in_progress",
+        "estimatedImpact": {
+          "value": 2400.0,
+          "unit": "tCO2e"
+        },
+        "createdAt": "2026-07-08T14:20:00Z"
+      },
+      {
+        "id": "ins-03",
+        "category": "G",
+        "title": "Supplier ESG Disclosures",
+        "description": "24% of Tier 1 suppliers have not submitted their carbon footprint reporting for Q2.",
+        "recommendation": "Send automated reminders and link future vendor evaluations to compliance scores.",
+        "severity": "critical",
+        "status": "unresolved",
+        "estimatedImpact": {
+          "value": 15,
+          "unit": "% Supplier compliance"
+        },
+        "createdAt": "2026-07-11T16:45:00Z"
+      }
+    ]
+  }
+}

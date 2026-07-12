@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "timestamp": "2026-07-12T10:00:00Z",
+  "data": {
+    "currentMetrics": {
+      "year": 2026,
+      "breakdown": {
+        "scope1": 4200.5,
+        "scope2": 8900.2,
+        "scope3": 24500.8,
+        "total": 37601.5
+      },
+      "targetEmissions": 35000.0,
+      "renewableEnergyPercentage": 64.5,
+      "intensityPerRevenue": 14.8
+    },
+    "historicalEmissions": [
+      {
+        "year": 2022,
+        "breakdown": {
+          "scope1": 5600.0,
+          "scope2": 12800.0,
+          "scope3": 31200.0,
+          "total": 49600.0
+        },
+        "targetEmissions": 50000.0,
+        "renewableEnergyPercentage": 32.0,
+        "intensityPerRevenue": 22.4
+      },
+      {
+        "year": 2023,
+        "breakdown": {
+          "scope1": 5100.0,
+          "scope2": 11400.0,
+          "scope3": 28600.0,
+          "total": 45100.0
+        },
+        "targetEmissions": 45000.0,
+        "renewableEnergyPercentage": 41.5,
+        "intensityPerRevenue": 19.5
+      },
+      {
+        "year": 2024,
+        "breakdown": {
+          "scope1": 4800.0,
+          "scope2": 10100.0,
+          "scope3": 26800.0,
+          "total": 41700.0
+        },
+        "targetEmissions": 40000.0,
+        "renewableEnergyPercentage": 52.0,
+        "intensityPerRevenue": 17.2
+      },
+      {
+        "year": 2025,
+        "breakdown": {
+          "scope1": 4450.0,
+          "scope2": 9300.0,
+          "scope3": 25200.0,
+          "total": 38950.0
+        },
+        "targetEmissions": 37500.0,
+        "renewableEnergyPercentage": 60.2,
+        "intensityPerRevenue": 15.6
+      },
+      {
+        "year": 2026,
+        "breakdown": {
+          "scope1": 4200.5,
+          "scope2": 8900.2,
+          "scope3": 24500.8,
+          "total": 37601.5
+        },
+        "targetEmissions": 35000.0,
+        "renewableEnergyPercentage": 64.5,
+        "intensityPerRevenue": 14.8
+      }
+    ]
+  }
+}
